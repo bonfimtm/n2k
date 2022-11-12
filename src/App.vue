@@ -1,6 +1,6 @@
 <script setup>
 import Board from './components/Board.vue'
-import ButtonCreate from './components/ButtonCreate.vue';
+import FormCreate from './components/FormCreate.vue';
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import ButtonCreate from './components/ButtonCreate.vue';
         <h1 class="app-title" style="margin: 0">Notes 2000</h1>
       </div>
       <div>
-        <ButtonCreate />
+        <FormCreate />
       </div>
     </div>
   </header>
