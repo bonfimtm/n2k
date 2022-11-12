@@ -1,5 +1,5 @@
 <template>
-    <div class="window window-button">
+    <div class="window button">
         <div class="meridian">
             <div class="diagonal"></div>
         </div>
@@ -7,6 +7,12 @@
 </template>
 
 <style scoped>
+.window.button {
+    float: right;
+    width: 16px;
+    height: 16px;
+}
+
 .meridian {
     height: 16px;
     width: 2px;

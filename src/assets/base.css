@@ -61,19 +61,13 @@ body {
   color: var(--text-color);
 }
 
-.window-button:active {
+.button:active {
   border-bottom-color: var(--window-border-color-primary);
   border-right-color: var(--window-border-color-primary);
   border-left-color: var(--window-border-color-secondary);
   border-top-color: var(--window-border-color-secondary);
 }
 
-.window-button {
-  float: right;
-  width: 16px;
-  height: 16px;
-}
-
-.window-button:hover {
-  opacity: .8;
+.button:hover {
+  cursor: default;
 }
