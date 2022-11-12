@@ -8,16 +8,16 @@
 
 <style scoped>
 .meridian {
-    height: 24px;
+    height: 16px;
     width: 2px;
-    margin-left: 11px;
+    margin-left: 7px;
     background-color: var(--text-color);
     transform: rotate(45deg);
     z-index: 1;
 }
 
 .diagonal {
-    height: 24px;
+    height: 16px;
     width: 2px;
     background-color: var(--text-color);
     transform: rotate(90deg);
