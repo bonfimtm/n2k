@@ -7,7 +7,6 @@ import Card from './Card.vue'
 export default {
   data() {
     return {
-      appName: 'Notes 2000',
       board: [
         {
           title: 'To Do',
@@ -28,7 +27,6 @@ export default {
 </script>
 
 <template>
-  <h1 class="title">Notes 2000</h1>
   <div class="board">
     <Column v-for="column in board">
       <template #title>

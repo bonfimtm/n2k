@@ -4,6 +4,7 @@ import Board from './components/Board.vue'
 
 <template>
   <header>
+    <h1 class="app-title">Notes 2000</h1>
   </header>
 
   <main>
