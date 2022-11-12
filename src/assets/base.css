@@ -71,3 +71,14 @@ body {
 .button:hover {
   cursor: default;
 }
+
+.input {
+  background-color: white;
+  outline: none;
+  border-bottom-color: var(--window-border-color-primary);
+  border-right-color: var(--window-border-color-primary);
+  border-left-color: var(--window-border-color-secondary);
+  border-top-color: var(--window-border-color-secondary);
+  font-family: 'Windows 95', 'Verdana', sans-serif;
+  font-size: x-large;
+}
