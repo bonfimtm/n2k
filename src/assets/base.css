@@ -1,0 +1,73 @@
+:root {
+  --text-color: rgb(33, 37, 41);
+  --bg-color: teal;
+  --window-title-bg-color: rgb(8, 33, 107);
+  --window-bg-color: rgb(192, 192, 192);
+  --window-border-color-primary: #ffffff;
+  --window-border-color-secondary: #424242;
+}
+
+@font-face {
+  font-family: 'Microsoft Sans Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Microsoft Sans Serif'), url('fonts/msss.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Windows 95';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Windows 95'), url('fonts/w95.woff2') format('woff2');
+}
+
+body {
+  min-height: 95vh;
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.6;
+  font-family: 'Microsoft Sans Serif', 'MS Sans Serif', Tahoma, Verdana, Segoe, sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.window-title {
+  color: white;
+  font-family: 'Windows 95', 'Verdana', sans-serif;
+  font-weight: bold;
+  background-color: var(--window-title-bg-color);
+  padding: 4px;
+  margin-top: 0;
+}
+
+.window {
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-color: var(--window-border-color-secondary);
+  border-right-color: var(--window-border-color-secondary);
+  border-left-color: var(--window-border-color-primary);
+  border-top-color: var(--window-border-color-primary);
+  background-color: var(--window-bg-color);
+  font-family: 'Windows 95', 'Verdana', sans-serif;
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+.window-button:active {
+  border-bottom-color: var(--window-border-color-primary);
+  border-right-color: var(--window-border-color-primary);
+  border-left-color: var(--window-border-color-secondary);
+  border-top-color: var(--window-border-color-secondary);
+}
+
+.window-button {
+  float: right;
+  width: 24px;
+  height: 24px;
+}
+
+.window-button:hover {
+  opacity: .8;
+}
