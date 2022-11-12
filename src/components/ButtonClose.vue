@@ -13,7 +13,7 @@
     margin-left: 11px;
     background-color: var(--text-color);
     transform: rotate(45deg);
-    Z-index: 1;
+    z-index: 1;
 }
 
 .diagonal {
@@ -21,6 +21,6 @@
     width: 2px;
     background-color: var(--text-color);
     transform: rotate(90deg);
-    Z-index: 2;
+    z-index: 2;
 }
 </style>
