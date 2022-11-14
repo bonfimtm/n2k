@@ -21,6 +21,9 @@ export default {
 </template>
 
 <style scoped>
+div {
+  border: solid 1px black;
+}
 .card {
   min-height: 64px;
   padding: 8px;

@@ -24,6 +24,9 @@ export default {
 </template>
 
 <style scoped>
+div {
+  border: solid 1px black;
+}
 .column {
   padding: 0;
   height: 75vh;
