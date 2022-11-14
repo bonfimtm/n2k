@@ -1,7 +1,22 @@
+<script>
+export default {
+    data() {
+        return {
+            text: ''
+        };
+    },
+    methods: {
+        createItem() {
+            console.log(this.text);
+        }
+    }
+}
+</script>
+
 <template>
     <div style="display: inline-flex; width: 100%;">
-        <input class="input" />
-        <button class="window button create">
+        <input class="input" v-model="text" />
+        <button class="window button create" @click="createItem">
             Create
         </button>
     </div>
