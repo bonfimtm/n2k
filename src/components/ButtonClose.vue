@@ -17,7 +17,7 @@
     height: 10px;
     width: 1px;
     margin-left: -.5px;
-    background-color: var(--text-color);
+    background-color: var(--text-color, black);
     transform: rotate(45deg);
     z-index: 1;
 }
@@ -25,7 +25,7 @@
 .diagonal {
     height: 10px;
     width: 1px;
-    background-color: var(--text-color);
+    background-color: var(--text-color, black);
     transform: rotate(90deg);
     z-index: 2;
 }
