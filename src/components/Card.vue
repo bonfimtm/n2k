@@ -12,7 +12,6 @@ export default {
 
 <template>
   <div class="card window">
-    <slot></slot>
     <ButtonClose />
     {{ card.text }}
   </div>
