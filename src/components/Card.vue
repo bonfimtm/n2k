@@ -7,12 +7,15 @@ export default {
   props: {
     card: Object,
   },
+  emits: [
+    'remove-card',
+  ],
 }
 </script>
 
 <template>
   <div class="card window">
-    <ButtonClose />
+    <ButtonClose @click="$emit('remove-card', card.id)" />
     {{ card.text }}
   </div>
 </template>

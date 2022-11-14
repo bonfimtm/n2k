@@ -24,16 +24,16 @@ export default {
     cardsFor(column) {
       return new Map(AllStatuses.map(status => [status, this.cards.filter(card => card.status === status)])).get(column);
     },
-    remove(card) {
-      console.log(`Removing ${card.text}`);
-    }
+    remove(cardId) {
+      this.cards = this.cards.filter(card => card.id !== cardId);
+    },
   },
 }
 </script>
 
 <template>
-  <div class="board">
-    <Column v-for="column in AllStatuses" :title="column" :cards="cardsFor(column)" />
+  <div class="board" @remove-card="remove(cardId)">
+    <Column v-for="column in AllStatuses" :title="column" :cards="cardsFor(column)" @remove-card="remove" />
   </div>
 </template>
 

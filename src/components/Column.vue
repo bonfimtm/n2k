@@ -8,6 +8,9 @@ export default {
     title: String,
     cards: Array,
   },
+  emits: [
+    'remove-card',
+  ],
 }
 </script>
 
@@ -16,7 +19,7 @@ export default {
     <h2 class="window-title">
       {{ title }}
     </h2>
-    <Card v-for="card in cards" :key="card.id" :card="card" />
+    <Card v-for="card in cards" :key="card.id" :card="card" @remove-card="cardId => $emit('remove-card', cardId)" />
   </div>
 </template>
 
