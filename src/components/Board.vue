@@ -10,15 +10,25 @@ export default {
       board: [
         {
           title: 'To Do',
-          cards: ['Go to the gym', 'Watch TV'],
+          cards: [
+            { id: 1, text: 'Go to the gym' },
+            { id: 2, text: 'Watch TV' },
+          ],
         },
         {
           title: 'Doing',
-          cards: ['Cook dinner', 'Drink wine'],
+          cards: [
+            { id: 3, text: 'Cook dinner' },
+            { id: 4, text: 'Drink wine' },
+          ],
         },
         {
           title: 'Done',
-          cards: ['Drink coffee', 'Eat breakfast', 'Eat lunch'],
+          cards: [
+            { id: 5, text: 'Drink coffee' },
+            { id: 6, text: 'Eat breakfast' },
+            { id: 7, text: 'Eat lunch' },
+          ],
         },
       ]
     };
@@ -34,7 +44,7 @@ export default {
       </template>
       <template #content>
         <Card v-for="card in column.cards">
-          {{ card }}
+          {{ card.text }}
         </Card>
       </template>
     </Column>
