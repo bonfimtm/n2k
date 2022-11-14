@@ -2,10 +2,19 @@
 import ButtonClose from './ButtonClose.vue'
 </script>
 
+<script>
+export default {
+  props: {
+    card: Object,
+  },
+}
+</script>
+
 <template>
   <div class="card window">
     <slot></slot>
     <ButtonClose />
+    {{ card.text }}
   </div>
 </template>
 

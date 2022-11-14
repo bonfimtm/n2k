@@ -1,12 +1,22 @@
 <script setup>
+import Card from './Card.vue';
+</script>
+
+<script>
+export default {
+  props: {
+    title: String,
+    cards: Array,
+  },
+}
 </script>
 
 <template>
   <div class="column window">
     <h2 class="window-title">
-      <slot name="title"></slot>
+      {{ title }}
     </h2>
-    <slot name="content"></slot>
+    <Card v-for="card in cards" :key="card.id" :card="card" />
   </div>
 </template>
 

@@ -1,6 +1,5 @@
 <script setup>
-import Column from './Column.vue'
-import Card from './Card.vue'
+import Column from './Column.vue';
 import { Status, AllStatuses } from './model';
 </script>
 
@@ -34,16 +33,7 @@ export default {
 
 <template>
   <div class="board">
-    <Column v-for="column in AllStatuses">
-      <template #title>
-        {{ column }}
-      </template>
-      <template #content>
-        <Card v-for="card in cardsFor(column)">
-          {{ card.text }}
-        </Card>
-      </template>
-    </Column>
+    <Column v-for="column in AllStatuses" :title="column" :cards="cardsFor(column)" />
   </div>
 </template>
 
