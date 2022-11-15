@@ -1,31 +1,16 @@
 <script setup>
 import Column from './Column.vue';
-import { Status, AllStatuses } from './model';
+import { Status, AllStatuses } from '../model';
 </script>
 
 <script>
 export default {
-  data() {
-    return {
-      cards: [
-        { id: 1, text: 'Go to the gym', status: Status.ToDo },
-        { id: 2, text: 'Watch TV', status: Status.ToDo },
-
-        { id: 3, text: 'Cook dinner', status: Status.Doing },
-        { id: 4, text: 'Drink wine', status: Status.Doing },
-
-        { id: 5, text: 'Drink coffee', status: Status.Done },
-        { id: 6, text: 'Eat breakfast', status: Status.Done },
-        { id: 7, text: 'Eat lunch', status: Status.Done },
-      ]
-    };
+  props: {
+    cards: Array,
   },
   methods: {
     cardsFor(column) {
       return new Map(AllStatuses.map(status => [status, this.cards.filter(card => card.status === status)])).get(column);
-    },
-    remove(cardId) {
-      this.cards = this.cards.filter(card => card.id !== cardId);
     },
   },
 }
@@ -33,7 +18,8 @@ export default {
 
 <template>
   <div class="board" @remove-card="remove(cardId)">
-    <Column v-for="column in AllStatuses" :title="column" :cards="cardsFor(column)" @remove-card="remove" />
+    <Column v-for="column in AllStatuses" :title="column" :cards="cardsFor(column)"
+      @remove-card="cardId => $emit('remove-card', cardId)" />
   </div>
 </template>
 

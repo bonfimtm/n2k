@@ -1,14 +1,20 @@
 <script>
 export default {
+    emits: [
+        'add-card',
+    ],
     data() {
         return {
             text: ''
         };
     },
     methods: {
-        createItem() {
-            console.log(this.text);
-        }
+        add() {
+            if (this.text) {
+                this.$emit('add-card', this.text)
+                this.text = '';
+            }
+        },
     }
 }
 </script>
@@ -16,9 +22,7 @@ export default {
 <template>
     <div style="display: inline-flex; width: 100%;">
         <input class="input" v-model="text" />
-        <button class="window button create" @click="createItem">
-            Create
-        </button>
+        <button class="window button add" @click="add">Add</button>
     </div>
 </template>
 
@@ -29,7 +33,7 @@ export default {
     margin-right: 8px;
 }
 
-.button.create {
+.button.add {
     width: 128px;
     height: 32px;
     padding: 6px 6px;
