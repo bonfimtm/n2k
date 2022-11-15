@@ -20,10 +20,10 @@ export default {
 </script>
 
 <template>
-    <div style="display: inline-flex; width: 100%;">
+    <form style="display: inline-flex; width: 100%;" @submit.prevent="add">
         <input class="input" v-model.trim="text" />
-        <button class="window button add" @click="add">Add</button>
-    </div>
+        <button class="window button add" type="submit">Add</button>
+    </form>
 </template>
 
 <style scoped>
