@@ -31,7 +31,7 @@ export default {
     move(transition) {
       const { cardId, status } = transition;
       this.cards = this.cards.map(card => {
-        if (card.id == cardId) {
+        if (card.id === cardId) {
           return { ...card, status };
         } else {
           return card;

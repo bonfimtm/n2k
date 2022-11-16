@@ -14,7 +14,7 @@ export default {
   ],
   methods: {
     onDrop(event, status) {
-      const cardId = event.dataTransfer.getData('cardId');
+      const cardId = parseInt(event.dataTransfer.getData('cardId'));
       this.$emit('move-card', { cardId, status });
     },
   }
