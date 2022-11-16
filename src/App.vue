@@ -7,24 +7,26 @@ import { Status, AllStatuses } from './model';
 <script>
 export default {
   data() {
+    const cards = [
+      { id: 1, text: 'Go to the gym', status: Status.ToDo },
+      { id: 2, text: 'Watch TV', status: Status.ToDo },
+
+      { id: 3, text: 'Cook dinner', status: Status.Doing },
+      { id: 4, text: 'Drink wine', status: Status.Doing },
+
+      { id: 5, text: 'Drink coffee', status: Status.Done },
+      { id: 6, text: 'Eat breakfast', status: Status.Done },
+      { id: 7, text: 'Eat lunch', status: Status.Done },
+    ];
     return {
       text: '',
-      cards: [
-        { id: 1, text: 'Go to the gym', status: Status.ToDo },
-        { id: 2, text: 'Watch TV', status: Status.ToDo },
-
-        { id: 3, text: 'Cook dinner', status: Status.Doing },
-        { id: 4, text: 'Drink wine', status: Status.Doing },
-
-        { id: 5, text: 'Drink coffee', status: Status.Done },
-        { id: 6, text: 'Eat breakfast', status: Status.Done },
-        { id: 7, text: 'Eat lunch', status: Status.Done },
-      ]
+      cards,
+      sequence: cards.length,
     };
   },
   methods: {
     add(text) {
-      const newId = this.cards.length + 1;
+      const newId = ++this.sequence;
       const newCard = { id: newId, text, status: Status.ToDo };
       this.cards = [...this.cards, newCard];
     },
