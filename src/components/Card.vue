@@ -10,11 +10,18 @@ export default {
   emits: [
     'remove-card',
   ],
+  methods: {
+    onDragStart: (event, card) => {
+      event.dataTransfer.dropEffect = 'move';
+      event.dataTransfer.effectAllowed = 'move';
+      event.dataTransfer.setData('cardId', card.id);
+    }
+  }
 }
 </script>
 
 <template>
-  <div class="card window">
+  <div class="card window" draggable="true" @dragstart="onDragStart($event, card)">
     <ButtonClose @click="$emit('remove-card', card.id)" />
     {{ card.text }}
   </div>
@@ -24,6 +31,7 @@ export default {
 div {
   border: solid 1px black;
 }
+
 .card {
   min-height: 64px;
   padding: 8px;

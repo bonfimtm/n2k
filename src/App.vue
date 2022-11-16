@@ -28,6 +28,16 @@ export default {
       const newCard = { id: newId, text, status: Status.ToDo };
       this.cards = [...this.cards, newCard];
     },
+    move(transition) {
+      const { cardId, status } = transition;
+      this.cards = this.cards.map(card => {
+        if (card.id == cardId) {
+          return { ...card, status };
+        } else {
+          return card;
+        }
+      });
+    },
     remove(cardId) {
       this.cards = this.cards.filter(card => card.id !== cardId);
     },
@@ -48,7 +58,7 @@ export default {
   </header>
 
   <main>
-    <Board :cards="cards" @remove-card="remove" />
+    <Board :cards="cards" @remove-card="remove" @move-card="transition => move(transition)" />
   </main>
 </template>
 

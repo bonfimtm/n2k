@@ -18,8 +18,8 @@ export default {
 
 <template>
   <div class="board" @remove-card="remove(cardId)">
-    <Column v-for="column in AllStatuses" :title="column" :cards="cardsFor(column)"
-      @remove-card="cardId => $emit('remove-card', cardId)" />
+    <Column v-for="status in AllStatuses" :status="status" :cards="cardsFor(status)"
+      @remove-card="cardId => $emit('remove-card', cardId)" @move-card="transition => $emit('move-card', transition)" />
   </div>
 </template>
 
