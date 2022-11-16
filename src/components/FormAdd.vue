@@ -11,7 +11,7 @@ export default {
     methods: {
         add() {
             if (this.text) {
-                this.$emit('add-card', this.text)
+                this.$emit('add-card', this.text);
                 this.text = '';
             }
         },
