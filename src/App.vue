@@ -39,10 +39,10 @@ export default {
 <template>
   <header>
     <div style="display: inline-flex; width: 100%;">
-      <div style="width: 100%">
+      <div style="display: flex; align-items: center; width: 60%; height: 55px">
         <h1 class="app-title" style="margin: 0">Notes 2000</h1>
       </div>
-      <div>
+      <div style="display: flex; align-items: center; width: 40%; height: 55px">
         <FormAdd @add-card="add" />
       </div>
     </div>

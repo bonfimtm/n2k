@@ -21,7 +21,7 @@ export default {
 
 <template>
     <form style="display: inline-flex; width: 100%;" @submit.prevent="add">
-        <input class="input" v-model.trim="text" />
+        <input class="input" style="width: 100%;" v-model.trim="text" />
         <button class="window button add" type="submit">Add</button>
     </form>
 </template>

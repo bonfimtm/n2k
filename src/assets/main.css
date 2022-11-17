@@ -1,5 +1,9 @@
 @import './base.css';
 
+body {
+  margin: 0 8px;
+}
+
 #app {
-  padding: 4px;
+  padding: 0 4px;
 }
